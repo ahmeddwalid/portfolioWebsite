@@ -1,13 +1,14 @@
+
 import React from 'react';
-import Section from './Section';
-import { SkillItem } from '../types';
-import { LockClosedIcon } from './icons/LockClosedIcon';
-import { CommandLineIcon } from './icons/CommandLineIcon';
-import { CodeBracketIcon } from './icons/CodeBracketIcon';
-import { BrainIcon } from './icons/BrainIcon'; 
-import { DatabaseIcon } from './icons/DatabaseIcon'; 
-import { NetworkIcon } from './icons/NetworkIcon'; 
-import { ChipIcon } from './icons/ChipIcon'; 
+import Section from './Section.tsx';
+import { SkillItem } from '../types.ts';
+import { LockClosedIcon } from './icons/LockClosedIcon.tsx';
+import { CommandLineIcon } from './icons/CommandLineIcon.tsx';
+import { CodeBracketIcon } from './icons/CodeBracketIcon.tsx';
+import { BrainIcon } from './icons/BrainIcon.tsx'; 
+import { DatabaseIcon } from './icons/DatabaseIcon.tsx'; 
+import { NetworkIcon } from './icons/NetworkIcon.tsx'; 
+import { ChipIcon } from './icons/ChipIcon.tsx'; 
 
 const skillsData: SkillItem[] = [
   { 
@@ -49,8 +50,8 @@ const skillsData: SkillItem[] = [
   { 
     name: 'Hardware & Embedded Systems Security', 
     icon: <ChipIcon className="w-8 h-8 mr-3" />, 
-    description: "Experience with electronics design, microcontroller programming (Arduino, Raspberry Pi, STM32), and securing embedded systems against tampering.",
-    details: ["Microcontroller programming", "Device integrity checks", "Physical security concepts"]
+    description: "Experience with electronics design, microcontroller programming (Arduino, Raspberry Pi, STM32), RTOS, and securing embedded systems against tampering.",
+    details: ["Microcontroller programming", "RTOS (Real-Time Operating Systems)", "Device integrity checks", "Physical security concepts"]
   },
   {
     name: 'System Administration (RHEL)',
