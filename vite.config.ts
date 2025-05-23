@@ -6,10 +6,6 @@ export default defineConfig(({ mode }) => {
     return {
       // Add the base option here
       base: '/portfolioWebsite/', // This is the line you need to add
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
       resolve: {
         alias: {
           '@': path.resolve(__dirname, '.'),
