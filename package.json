@@ -14,7 +14,21 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-    "test": "vitest"
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "test:coverage:report": "vitest --coverage && open coverage/lcov-report/index.html",
+    "test:coverage:report:watch": "vitest --coverage --watch && open coverage/lcov-report/index.html",
+    "prepare": "husky install",
+    "precommit": "lint-staged",
+    "postinstall": "husky add .husky/pre-commit 'npm run lint:fix && npm run test:coverage:report'",
+    "postdeploy": "echo 'Deployment complete! Visit https://ahmeddwalid.github.io/portfolioWebsite/'",
+    "postbuild": "echo 'Build complete! Ready for deployment.'",
+    "posttest": "echo 'Tests completed! Check the coverage report.'",
+    "postformat": "echo 'Code formatting complete!'",
+    "postlint": "echo 'Linting complete! Check for any issues.'",
+    "postlint:fix": "echo 'Linting fixed! All issues should be resolved.'",
+    "postprepare": "echo 'Husky hooks installed! Ready for commits.'"
   },
   "dependencies": {
     "react": "^19.1.0",

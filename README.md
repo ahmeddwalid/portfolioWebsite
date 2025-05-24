@@ -1,6 +1,6 @@
-# Ahmed Walid Portfolio
+# Ahmed Walid's Portfolio
 
-## Run Locally
+## To Run Locally
 
 **Prerequisites:**  Node.js
 
