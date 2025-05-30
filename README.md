@@ -18,7 +18,6 @@ Explore it live: [https://ahmeddwalid.github.io/portfolioWebsite/](https://ahmed
 
 * **Responsive Design**: Adapts seamlessly from mobile to desktop.
 * **Smooth Navigation**: Sticky header with anchor links for quick section jumps.
-* 
 * **Project Gallery**: Interactive showcase of my latest work.
 * **Contact Form**: Reach out directly via email or social links.
 
