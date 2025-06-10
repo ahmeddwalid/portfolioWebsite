@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import Section from './Section.tsx';
 import TerminalText from './TerminalText.tsx';
 
@@ -11,7 +11,34 @@ const contactLinks = [
   { name: 'Codewars', url: 'https://www.codewars.com/users/ahmeddwalid', handle: 'ahmeddwalid' },
 ];
 
+const pgpPublicKey = `-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEaEIkrxYJKwYBBAHaRw8BAQdAQmkxMwOu8gXelR0dWdlRib/73Xc47/2zQ3tw
+7jUaqNe0C0FobWVkIFdhbGlkiJkEExYKAEEWIQQdAw6SkRhA4etnTqtDWLVHsmHA
+KAUCaEIkrwIbAwUJBaV1YQULCQgHAgIiAgYVCgkICwIEFgIDAQIeBwIXgAAKCRBD
+WLVHsmHAKFCUAP0VuwkSUK4YhFYLvHbT76z4IEpXQWBcsnBvb+qtj1OtvwEA+R4A
+QlcuiNjpEbOiqbS3rsiLSWpHu1JleICdCQ5lIQG4OARoQiSvEgorBgEEAZdVAQUB
+AQdAZIe8QxY3+o01YzpwidpML6y1Frg6rZwb65HREiAuinoDAQgHiH4EGBYKACYW
+IQQdAw6SkRhA4etnTqtDWLVHsmHAKAUCaEIkrwIbDAUJBaV1YQAKCRBDWLVHsmHA
+KLo4AP9aSOZ/kAJpPiz4zRzR1lB8OhLPnoCk6bJaZqDFdBwu4wD/Uxo3MSSgxYjy
+eMG9HoK5Jz4bDCP4CxiSm/vpBHRcngQ=
+=7hs9
+-----END PGP PUBLIC KEY BLOCK-----`;
+
 const ContactSection: React.FC = () => {
+  const [isPgpKeyCopied, setIsPgpKeyCopied] = useState(false);
+
+  const handleCopyPgpKey = async () => {
+    try {
+      await navigator.clipboard.writeText(pgpPublicKey);
+      setIsPgpKeyCopied(true);
+      setTimeout(() => setIsPgpKeyCopied(false), 2000); // Hide message after 2 seconds
+    } catch (err) {
+      console.error('Failed to copy PGP key: ', err);
+      // Optionally, provide user feedback about the copy failure
+    }
+  };
+
   return (
     <Section id="contact" title="secure_channel" className="bg-gray-900/50">
       <div className="max-w-3xl mx-auto text-center">
@@ -56,6 +83,28 @@ const ContactSection: React.FC = () => {
               ))}
             </ul>
           </div>
+
+          <div>
+            <h4 className="text-2xl text-green-300 mb-2">{'>'}{'>'} PGP_Public_Key:</h4>
+            <div className="relative bg-gray-800/60 border border-green-600/50 p-3 rounded text-sm text-gray-400/90 overflow-x-auto">
+              <pre className="whitespace-pre-wrap break-all select-all">
+                {pgpPublicKey}
+              </pre>
+              <button
+                onClick={handleCopyPgpKey}
+                className="absolute top-2 right-2 px-3 py-1 bg-green-700 hover:bg-green-600 text-green-100 border border-green-500/80 transition-colors text-xs rounded shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-2 focus:ring-offset-gray-800"
+                aria-label="Copy PGP Public Key to clipboard"
+              >
+                Copy Key
+              </button>
+            </div>
+            {isPgpKeyCopied && (
+              <p className="text-xs text-green-300 mt-2 text-right transition-opacity duration-300 ease-in-out opacity-100">
+                Key copied to clipboard!
+              </p>
+            )}
+          </div>
+
         </div>
         
         <p className="mt-10 text-gray-500 text-md">

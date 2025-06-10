@@ -1,8 +1,8 @@
 
 import React from 'react';
-import Section from './Section';
-import { ProjectItem } from '../types';
-import TerminalText from './TerminalText';
+import Section from './Section.tsx';
+import { ProjectItem } from '../types.ts';
+import TerminalText from './TerminalText.tsx';
 
 const projectsData: ProjectItem[] = [
   {
@@ -10,7 +10,7 @@ const projectsData: ProjectItem[] = [
     title: 'Native Android Application (Finjan)',
     description: "Developed a native Android application named 'Finjan'. This project involved full-cycle app development, focusing on user experience, functionality, and clean architecture using MVVM.",
     tags: ['Android', 'Java/Kotlin', 'Mobile Development', 'Software Engineering', 'MVVM', 'Firebase'],
-    image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlJTIwc2hvcCUyMGludGVyaW9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60', // New, different coffee shop image
+    image: 'https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y29mZmVlJTIwc2hvcCUyMGludGVyaW9yfGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60',
     link: 'https://github.com/ahmeddwalid/Finjan',
     category: "Software Development",
   },
@@ -22,6 +22,15 @@ const projectsData: ProjectItem[] = [
     image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cmVzdGF1cmFudCUyMGFwcGxpY2F0aW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=600&q=60',
     link: 'https://github.com/ahmeddwalid/AdvProgProj',
     category: 'Software Development',
+  },
+  {
+    id: 'walid_passanalyzer',
+    title: 'Walid PassAnalyzer',
+    description: "Privacy-focused password strength analyzer with crack-time estimates and improvement suggestions. Built with React & TypeScript.",
+    tags: ['React', 'TypeScript', 'Password Security', 'Privacy', 'Client-Side', 'UI/UX', 'Open Source', 'zxcvbn'],
+    image: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=60', // Placeholder for security/code
+    link: 'https://github.com/ahmeddwalid/Walid-PassAnalyzer',
+    category: "Software Development",
   },
   {
     id: 'needham_schroeder_protocol',
@@ -63,7 +72,7 @@ const projectsData: ProjectItem[] = [
     description: "Actively honing cybersecurity skills through Capture The Flag (CTF) competitions and online learning platforms. Continuously challenging myself and expanding my knowledge base in practical, hands-on environments.",
     tags: ['CTF', 'Ethical Hacking', 'Skill Development', 'TryHackMe', 'HackTheBox', 'Codewars'],
     image: 'https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29kZXxlbnwwfHwwfHx8MA&auto=format&fit=crop&w=600&q=60',
-    link: '#contact', 
+    link: '#contact',
     category: "Skill Development",
   },
 ];
@@ -72,9 +81,9 @@ const projectsData: ProjectItem[] = [
 const CardContentInner: React.FC<{ project: ProjectItem }> = ({ project }) => (
   <>
     <div className="relative h-48 overflow-hidden">
-      <img 
-        src={project.image || `https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2plY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60`} 
-        alt={`${project.title} preview`} 
+      <img
+        src={project.image || `https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2plY3R8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60`}
+        alt={`${project.title} preview`}
         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-50 group-hover:opacity-75"
       />
       <div className="absolute inset-0 bg-black/50 group-hover:bg-black/30 transition-colors duration-300"></div>
