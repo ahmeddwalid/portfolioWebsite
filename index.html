@@ -1,16 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ahmed Walid</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Primary Meta Tags -->
+  <title>Ahmed Walid | Cybersecurity Professional & Ethical Hacker</title>
+  <meta name="title" content="Ahmed Walid | Cybersecurity Professional & Ethical Hacker">
+  <meta name="description" content="Portfolio of Ahmed Walid - Cybersecurity Final Year Student specializing in penetration testing, ethical hacking, network security, and secure software development.">
+  <meta name="keywords" content="cybersecurity, ethical hacking, penetration testing, OSCP, network security, Ahmed Walid, security researcher, CTF, malware analysis">
+  <meta name="author" content="Ahmed Walid">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ahmeddwalid.github.io/portfolioWebsite/">
+  <meta property="og:title" content="Ahmed Walid | Cybersecurity Professional & Ethical Hacker">
+  <meta property="og:description" content="Portfolio of Ahmed Walid - Cybersecurity Final Year Student specializing in penetration testing, ethical hacking, and secure software development.">
+  <meta property="og:image" content="https://ahmeddwalid.github.io/portfolioWebsite/og-image.png">
+  <meta property="og:site_name" content="Ahmed Walid Portfolio">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ahmeddwalid.github.io/portfolioWebsite/">
+  <meta property="twitter:title" content="Ahmed Walid | Cybersecurity Professional & Ethical Hacker">
+  <meta property="twitter:description" content="Portfolio of Ahmed Walid - Cybersecurity Final Year Student specializing in penetration testing, ethical hacking, and secure software development.">
+  <meta property="twitter:image" content="https://ahmeddwalid.github.io/portfolioWebsite/og-image.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/portfolioWebsite/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ahmeddwalid.github.io/portfolioWebsite/">
+  
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
   <style>
-    body {
-        font-family: 'VT323', monospace;
+    /* Smooth scroll behavior */
+    html {
+      scroll-behavior: smooth;
     }
+    
+    body {
+      font-family: 'VT323', monospace;
+    }
+    
     /* Custom scrollbar for a more 'hacker' feel */
     ::-webkit-scrollbar {
       width: 8px;
@@ -25,6 +70,7 @@
     ::-webkit-scrollbar-thumb:hover {
       background: #00cc00;
     }
+    
     /* Basic glitch animation */
     @keyframes glitch-animation {
       0% { transform: translate(0); opacity: 1; }
@@ -39,24 +85,74 @@
     .glitch-effect {
       animation: glitch-animation 0.5s infinite alternate-reverse;
     }
-    .font-vt323 { /* Ensure this class is available if needed, though body style is preferred */
-        font-family: 'VT323', monospace;
+    
+    .font-vt323 {
+      font-family: 'VT323', monospace;
+    }
+    
+    /* Scroll reveal animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Staggered animation delays */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    
+    /* Skip to content link */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #00ff00;
+      color: black;
+      padding: 8px 16px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+    .skip-link:focus {
+      top: 0;
     }
   </style>
+  
 
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@^19.1.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
-    "react/": "https://esm.sh/react@^19.1.0/"
+  <script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react@^19.1.0",
+      "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+      "react/": "https://esm.sh/react@^19.1.0/"
+    }
   }
-}
-</script>
-  <script type="module" crossorigin src="/portfolioWebsite/assets/index-0cwGvEgs.js"></script>
+  </script>
+  <script type="module" crossorigin src="/portfolioWebsite/assets/index-IxMwXbKU.js"></script>
 </head>
 <body class="bg-black text-green-400 font-vt323">
   <div id="root"></div>
 </body>
 </html>
-<link rel="stylesheet" href="index.css">

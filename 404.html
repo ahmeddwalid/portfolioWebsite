@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Walid | Page Not Found</title>
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'VT323', monospace;
+        }
+
+        @keyframes glitch {
+            0% {
+                transform: translate(0);
+            }
+
+            20% {
+                transform: translate(-2px, 2px);
+            }
+
+            40% {
+                transform: translate(2px, -2px);
+            }
+
+            60% {
+                transform: translate(-2px, -2px);
+            }
+
+            80% {
+                transform: translate(2px, 2px);
+            }
+
+            100% {
+                transform: translate(0);
+            }
+        }
+
+        .glitch {
+            animation: glitch 0.5s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .blink {
+            animation: blink 1s infinite;
+        }
+    </style>
+    <script>
+        // SPA redirect script for GitHub Pages
+        // Redirects 404s to index.html with the path stored
+        (function () {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect !== location.href) {
+                history.replaceState(null, null, redirect);
+            }
+        })();
+    </script>
+</head>
+
+<body class="bg-black text-green-400 min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="text-center max-w-2xl">
+        <h1 class="text-8xl md:text-9xl glitch mb-4">404</h1>
+        <div class="text-3xl md:text-4xl mb-6">
+            <span class="text-green-500">$</span> error: page_not_found
+        </div>
+        <div class="bg-gray-900/50 border border-green-500/30 p-6 mb-8 text-left">
+            <p class="text-xl text-gray-300 mb-4">
+                <span class="text-green-400">&gt;</span> The requested resource could not be located on this server.
+            </p>
+            <p class="text-xl text-gray-300">
+                <span class="text-green-400">&gt;</span> Status: <span class="text-red-400">CONNECTION_LOST</span>
+            </p>
+            <p class="text-lg text-gray-500 mt-4">
+                // It seems you've ventured into uncharted territory.
+            </p>
+        </div>
+        <a href="/portfolioWebsite/"
+            class="inline-block text-xl px-8 py-3 border-2 border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition-all duration-300">
+            &gt; return_to_base
+        </a>
+        <p class="mt-8 text-green-500/60 text-lg">
+            <span class="blink">_</span>
+        </p>
+    </div>
+</body>
+
+</html>
