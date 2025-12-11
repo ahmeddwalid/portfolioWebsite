@@ -16,9 +16,25 @@ const AboutSection: React.FC = () => {
           </p>
 
           <div className="mb-6">
+            <h4 className="text-2xl text-green-300 mb-2">// Experience_Log</h4>
+            <div className="text-gray-400 pl-4 space-y-4">
+              <div>
+                <p className="text-green-200 font-semibold">Bibliotheca Alexandrina - Network Security & Systems Engineering Intern</p>
+                <p className="text-sm text-gray-500">September 2025 | Alexandria</p>
+                <ul className="list-disc list-inside mt-1 text-sm">
+                  <li>Enterprise data center operations, fiber optic cabling (single/multi-mode), Cisco UCS servers</li>
+                  <li>Configured FortiGate 40F firewall, site-to-site VPN, static/dynamic routing</li>
+                  <li>Administered Cisco routers (1800/800 Series) and 3560G PoE-48 switch with security features</li>
+                  <li>Operated Cisco Firepower NGFWs (1010/4215) for advanced threat protection</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-6">
             <h4 className="text-2xl text-green-300 mb-2">// Education_Log</h4>
             <ul className="list-disc list-inside text-gray-400 pl-4">
-              <li>Bachelor of Science in Cybersecurity, AAST (Expected 2026) - Alexandria, Egypt</li>
+              <li>Bachelor's in Computing and Information Technology (Cybersecurity), AAST (2022-2026) - Alexandria, Egypt</li>
               <li>Egyptian English Language School (EELS) - Graduated 2022</li>
             </ul>
           </div>
@@ -26,28 +42,27 @@ const AboutSection: React.FC = () => {
           <div className="mb-6">
             <h4 className="text-2xl text-green-300 mb-2">// Certifications_&_Training</h4>
             <ul className="list-disc list-inside text-gray-400 pl-4">
-              <li>Red Hat Certified System Administrator (RHCSA) (ITI institute) - Target 2025</li>
-              <li>Fortinet Certified Professional (FCF) - Cybersecurity - Target 2025</li>
-              <li>Offensive Security Certified Professional (OSCP) - Currently Preparing</li>
+              <li>Red Hat Certified System Administrator (RHCSA) - Information Technology Institute (2025)</li>
+              <li>Cisco Certified Network Associate (CCNA) - Cisco (2024)</li>
               <li>
-                <a 
-                  href="https://www.credly.com/badges/7d0ff400-e0c7-4c79-948f-e5118a3a517f/public_url" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href="https://www.credly.com/badges/7d0ff400-e0c7-4c79-948f-e5118a3a517f/public_url"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-green-200 hover:underline"
                 >
-                  Fortinet Certified Fundamentals in Cybersecurity
+                  Fortinet Certified in Cybersecurity (FCF) - Fortinet (2025)
                 </a>
               </li>
-              <li>Effective Test Case and Bug Report Writing Techniques (ITI Egypt)</li>
-              <li>Malware Analysis Professional Training Course</li>
-              <li>Coursework Knowledge: CompTIA Linux+, Cisco CCNA</li>
+              <li>CompTIA Linux+ (2023)</li>
+              <li>Developing Secure Software - The Linux Foundation (2025)</li>
+              <li>Offensive Security Certified Professional (OSCP) - Currently Preparing</li>
             </ul>
           </div>
-          
+
           <div className="mb-6">
             <h4 className="text-2xl text-green-300 mb-2">// Human_Languages</h4>
-             <p className="text-gray-400">Arabic (Native), English (Fluent), French (A2), German (A2)</p>
+            <p className="text-gray-400">Arabic (Native), English (C2 Fluent), French (A2), German (A2)</p>
           </div>
 
           <div className="mb-6">

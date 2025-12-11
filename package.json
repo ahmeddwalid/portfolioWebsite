@@ -19,16 +19,8 @@
     "test:coverage": "vitest --coverage",
     "test:coverage:report": "vitest --coverage && open coverage/lcov-report/index.html",
     "test:coverage:report:watch": "vitest --coverage --watch && open coverage/lcov-report/index.html",
-    "prepare": "husky install",
-    "precommit": "lint-staged",
-    "postinstall": "husky add .husky/pre-commit 'npm run lint:fix && npm run test:coverage:report'",
     "postdeploy": "echo 'Deployment complete! Visit https://ahmeddwalid.github.io/portfolioWebsite/'",
-    "postbuild": "echo 'Build complete! Ready for deployment.'",
-    "posttest": "echo 'Tests completed! Check the coverage report.'",
-    "postformat": "echo 'Code formatting complete!'",
-    "postlint": "echo 'Linting complete! Check for any issues.'",
-    "postlint:fix": "echo 'Linting fixed! All issues should be resolved.'",
-    "postprepare": "echo 'Husky hooks installed! Ready for commits.'"
+    "postbuild": "echo 'Build complete! Ready for deployment.'"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -36,6 +28,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "gh-pages": "^6.1.1",
     "typescript": "~5.7.2",
     "vite": "^6.2.0"
