@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
             &gt; enter_system
           </a>
           <a
-            href="/portfolioWebsite/Ahmed Walid CV Resume.pdf"
+            href="/Ahmed Walid CV Resume.pdf"
             download="Ahmed_Walid_CV_Resume.pdf"
             className="text-xl px-8 py-3 border-2 border-green-600 text-green-400 hover:bg-green-600 hover:text-black transition-all duration-300 flex items-center gap-2"
             aria-label="Download Ahmed Walid's Resume"
