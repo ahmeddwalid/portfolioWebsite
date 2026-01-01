@@ -1,6 +1,6 @@
 {
   "name": "ahmed-walid---cybersecurity-portfolio",
-  "homepage": "https://ahmeddwalid.github.io/portfolioWebsite/",
+  "homepage": "https://ahmeddwalid.me/",
   "version": "1.0.0",
   "description": "My personal portfolio website showcasing my skills and projects in cybersecurity.",
   "private": true,
@@ -19,7 +19,7 @@
     "test:coverage": "vitest --coverage",
     "test:coverage:report": "vitest --coverage && open coverage/lcov-report/index.html",
     "test:coverage:report:watch": "vitest --coverage --watch && open coverage/lcov-report/index.html",
-    "postdeploy": "echo 'Deployment complete! Visit https://ahmeddwalid.github.io/portfolioWebsite/'",
+    "postdeploy": "echo 'Deployment complete! Visit https://ahmeddwalid.me/'",
     "postbuild": "echo 'Build complete! Ready for deployment.'"
   },
   "dependencies": {
